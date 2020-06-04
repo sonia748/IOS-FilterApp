@@ -38,9 +38,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // Rounded Buttons
+              roundedCornerSepiaButton.layer.cornerRadius = 15
+              roundedCornerSepiaButton.layer.masksToBounds = true
+              
+              roundedCornerBlurBtn.layer.cornerRadius = 15
+              roundedCornerBlurBtn.layer.masksToBounds = true
+              
+              roundedCornerMonoBtn.layer.cornerRadius = 15
+              roundedCornerMonoBtn.layer.masksToBounds = true
+              
+              roundedcornerComicBtn.layer.cornerRadius = 15
+              roundedcornerComicBtn.layer.masksToBounds = true
+              
+              roundedCornerMotionBtn.layer.cornerRadius = 15
+              roundedCornerMotionBtn.layer.masksToBounds = true
+              
+              roundedCornerPhotoBtn.layer.cornerRadius = 15
+              roundedCornerPhotoBtn.layer.masksToBounds = true
+              
+              roundedCornerResetBtn.layer.cornerRadius = 15
+                     roundedCornerResetBtn.layer.masksToBounds = true
+        
         defaulting = ImgView.image
     }
     
+           
   // BoxBlur Button
     @IBAction func BtnBlurFilter(_ sender: UIButton) {
         
@@ -66,7 +89,7 @@ class ViewController: UIViewController {
     @IBAction func BtnMonoChromeFilter(_ sender: UIButton) {
 
         var rawImg = CIImage(image: ImgView.image!)
-        var filterParams:[String:Any] = [kCIInputImageKey:rawImg, kCIInputColorKey:GL_RED, kCIInputIntensityKey:BlurRadius.value]
+        var filterParams:[String:Any] = [kCIInputImageKey:rawImg, kCIInputIntensityKey:BlurRadius.value]
         ApplyFilters(filterName: "CIColorMonochrome", filterParams: filterParams)
     }
     
@@ -113,28 +136,7 @@ class ViewController: UIViewController {
         }
         
         
-        
-        // Rounded Buttons
-        roundedCornerSepiaButton.layer.cornerRadius = 15
-        roundedCornerSepiaButton.layer.masksToBounds = true
-        
-        roundedCornerBlurBtn.layer.cornerRadius = 15
-        roundedCornerBlurBtn.layer.masksToBounds = true
-        
-        roundedCornerMonoBtn.layer.cornerRadius = 15
-        roundedCornerMonoBtn.layer.masksToBounds = true
-        
-        roundedcornerComicBtn.layer.cornerRadius = 15
-        roundedcornerComicBtn.layer.masksToBounds = true
-        
-        roundedCornerMotionBtn.layer.cornerRadius = 15
-        roundedCornerMotionBtn.layer.masksToBounds = true
-        
-        roundedCornerPhotoBtn.layer.cornerRadius = 15
-        roundedCornerPhotoBtn.layer.masksToBounds = true
-        
-        roundedCornerResetBtn.layer.cornerRadius = 15
-               roundedCornerResetBtn.layer.masksToBounds = true
+       
     }
     
     
